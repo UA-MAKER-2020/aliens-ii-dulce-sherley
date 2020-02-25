@@ -1,0 +1,15 @@
+weekspent = False 
+originalpop = False
+
+while weekspent == False: # while the weekspend = False then all the lines below will run 
+  try:
+    weeks = int(input("How many weeks have they been here?"))     # user will input the amout of weeks 
+    if weeks > -1:                                                # if weeks are >then -1 then the line below will run 
+      original = int(input("How many aliens originally landed?")) # the user will input the amount of aliens that originally landed 
+      for x in range (weeks):                                     # Mutiply the amunt of range by the weeks 
+        total = original * 2 ** (x + 1)                           # Mathematical calculations of weeks & original 
+        print("The population of week %s is " % (x + 1) + str(total)) # print out the population of weeks as an output 
+        weekspent = True                                        
+      print("That is not a positive number")
+  except ValueError:
+    print("Make sure you are using an integer and not any other response")    
