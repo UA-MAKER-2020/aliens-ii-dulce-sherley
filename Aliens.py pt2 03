@@ -1,0 +1,24 @@
+weekspent = False
+originalpop = False
+
+while weekspent == False:# Variable weekspent is currently false meaning the following must happen
+  try:#simply tells the program to try this code
+    weeks = int(input("How many weeks have they been here?"))# weeks is a seperate variable to ask the user a question
+    if weeks > -1:# code to check for the users answer
+      weekspent = True# if their answer is greater than -1 then weekspent it true which means the first loop ends
+      while originalpop == False:# starting another loop called originalpop as false
+        try:
+          original = int(input("How many aliens originally landed?"))
+          if original > -1:
+            for x in range (weeks):#A for loop used to repeat for a specific range
+              total = original * 2 ** (x + 1)#calculation to produce total for output
+              print("The population of week %s is " % (x + 1) + str(total))
+              originalpop = True# if original is greater than -1 than originalpop is true and loop ends
+          else: 
+            print("The number for original population needs to be positive")#else is used when original pop is less than -1 it prints what's inside the quotations
+        except ValueError:
+          print("Original population needs to be a number")#ValueError placed in order to check for a non integer
+    else:
+      print("That is not a positive number")#ties back to first loop
+  except ValueError:
+    print("Make sure you are using an integer and not any other response")#ties back to first loop    
