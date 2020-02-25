@@ -1,0 +1,11 @@
+weekspent = False   # Declaring veriable 
+originalpop = False # Declaring veriable  
+
+weeks = int(input("How many weeks have they been here?")) # The user will type in the amount of weeks 
+
+original = int(input("How many aliens originally landed?")) # the user will type in the amount of aliens that originally landed 
+
+for x in range(weeks): # Multiplying the amount of range by weeks                  
+    total = original * 2**(x + 1) # Mathematics calculations 
+    print("The population of week %s is " % (x + 1) + str(total)) # print out the total population of weeks as an Output 
+
