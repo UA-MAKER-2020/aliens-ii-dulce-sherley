@@ -1,5 +1,5 @@
-weekspent = False   # Declaring veriable 
-originalpop = False # Declaring veriable  
+weekspent = False   # Declaring variable 
+originalpop = False # Declaring variable  
 
 weeks = int(input("How many weeks have they been here?")) # The user will type in the amount of weeks 
 
